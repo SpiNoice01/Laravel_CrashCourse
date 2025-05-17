@@ -154,3 +154,8 @@ ini cara bacanya : ketika kita ada di halaman web ini (/note/{id}/edit'), nanti 
 2. Buat css berdasarkan html class div
 3. gunakan @vite untuk menginclude css dan js tanpa harus memindahkannya ke dalan folder public
 
+> DEFINE VIEWS.
+disini kita mengedit html atau blade nya. supaya get data, kemudian menambahkan route kedalam action dan juga href nya
+kita edit seluruh file html blade yang masih kosong
+
+> lanjut ke bagian Note Create menit 54
