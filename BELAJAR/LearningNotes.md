@@ -132,3 +132,25 @@ Route::get('/note/{id}/edit', [NoteController::class, 'edit'])->name('note.edit'
 
 ini cara bacanya : ketika kita ada di halaman web ini (/note/{id}/edit'), nanti akan di atur oleh ini (NoteController::class, 'edit'), yang ada di dalam controller. dan jangan lupa dilihat methodnya get atau post. kemudian untuk name cuma untuk id saja
 
+> CRUD KELAR
+
+> CREATING UI LAYOUT
+1. buat folder manual di resouces/layout/ new folder layout/ tambahkan layout.blade.php
+2. didalam folder notes view, kita ubah kode file nya dengan bungkus luar kodenya (x-layout), ini gunanya untuk membungkus html dengan layout yang baru kita buat.
+
+> Views terbuat, sekarang select data dari database dan tampilkan ke views ⭐
+1. masuk kedalam controllernya lagi dan tambahkan ini di dalam index "        $notes = Note::query()->orderBy('created_at', 'desc')->get();
+        return view('note.index', [
+            'notes' => $notes,"
+
+            dan juga tambahkan         return view('note.show', [
+            'note' => $note,
+        ]);
+
+        aku lupa ini gunanya apa.
+
+> UI UX
+1. include css dan JS. kedalam layout
+2. Buat css berdasarkan html class div
+3. gunakan @vite untuk menginclude css dan js tanpa harus memindahkannya ke dalan folder public
+
